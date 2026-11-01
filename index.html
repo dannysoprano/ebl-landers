@@ -155,19 +155,6 @@ summary{font-weight:500;font-size:15.5px}.kv b{font-weight:600;font-size:19px}
 .pay svg{color:var(--blue)}
 @media(max-width:700px){.steps3{flex-direction:column;align-items:flex-start;gap:10px;width:max-content}.steps3 li+li::before{display:none}.perks{display:flex;flex-direction:column;width:100%}}
 </style>
-<style>
-/* Payment methods row: every logo sits in an identical 52 x 34 slot.
-   Logos load from the WooCommerce Stripe plugin's image folder on your site.
-   If a file is missing, that slot is hidden.
-   To use your own files, change the src on that <img>. */
-.accept{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 auto 22px;flex-wrap:wrap}
-.accept-lbl{font-family:var(--font);font-size:13.5px;font-weight:500;color:#8a8d99}
-.paymarks{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin:0}
-.pm{width:50px;height:32px;flex:0 0 50px;border:1px solid #e4e5ea;border-radius:6px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:6px 8px}
-.pm img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block}
-.pm-crypto{color:#f7931a}.pm-crypto svg{width:18px;height:18px}
-@media(max-width:700px){.accept{flex-direction:column;gap:7px;margin-bottom:18px}.accept-lbl{font-size:12.5px}.paymarks{gap:5px}.pm{width:42px;height:28px;flex-basis:42px;border-radius:5px;padding:5px 6px}.pm-crypto svg{width:16px;height:16px}}
-</style>
 </head>
 <body>
 <div class="announce" role="region" aria-label="Shipping offer"><p><span>Spend &euro;180 for Free Shipping!</span><a href="https://europeanbiolabs.com/shop/">Shop Now <span aria-hidden="true">&rarr;</span></a></p></div>
@@ -178,7 +165,6 @@ summary{font-weight:500;font-size:15.5px}.kv b{font-weight:600;font-size:19px}
 <p class="sr" id="live" aria-live="polite"></p>
 <section class="main notop"><div class="wrap">
 
-<div class="accept"><span class="accept-lbl">We accept</span><ul class="paymarks" aria-label="Payment methods accepted: Visa, Mastercard, SEPA, Bancontact, Link, crypto"><li class="pm"><img src="https://europeanbiolabs.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/visa.svg" alt="Visa" loading="eager" onerror="this.parentNode.remove()"></li><li class="pm"><img src="https://europeanbiolabs.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/mastercard.svg" alt="Mastercard" loading="eager" onerror="this.parentNode.remove()"></li><li class="pm"><img src="https://europeanbiolabs.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/sepa.svg" alt="SEPA" loading="eager" onerror="this.parentNode.remove()"></li><li class="pm"><img src="https://europeanbiolabs.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/bancontact.svg" alt="Bancontact" loading="eager" onerror="this.parentNode.remove()"></li><li class="pm"><img src="https://europeanbiolabs.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/link.svg" alt="Link" loading="eager" onerror="this.parentNode.remove()"></li><li class="pm pm-crypto"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 8h4.5a2 2 0 0 1 0 4H9m0 0h5a2 2 0 0 1 0 4H9zm0-4V8m0 8V12"/></svg></li></ul></div>
 <h1>10% off your first order, plus free shipping over &euro;180</h1>
 <p class="lede">Get your code by email when you join in the store. Orders leave Italy with UPS tracking.</p>
 
