@@ -28,7 +28,7 @@ document.addEventListener('click',function(e){
   if(!a||!window.fbq)return;
   try{
     var path=new URL(a.href).pathname;
-    fbq('trackCustom', path.indexOf('/shop')===0 ? 'StartShopping' : 'ClickToStore', {link:path});
+    if(path.indexOf('/shop')===0){fbq('track','Lead',{content_name:'StartShopping'})}else{fbq('trackCustom','ClickToStore',{link:path})}
     if(!e.metaKey&&!e.ctrlKey&&!e.shiftKey&&a.target!=='_blank'){
       e.preventDefault();
       setTimeout(function(){location.href=a.href},300);
