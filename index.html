@@ -27,7 +27,8 @@ document.addEventListener('click',function(e){
   var a=e.target.closest&&e.target.closest('a[href*="europeanbiolabs.com"]');
   if(!a||!window.fbq)return;
   try{
-    fbq('trackCustom','ClickToStore',{link:new URL(a.href).pathname});
+    var path=new URL(a.href).pathname;
+    fbq('trackCustom', path.indexOf('/shop')===0 ? 'StartShopping' : 'ClickToStore', {link:path});
     if(!e.metaKey&&!e.ctrlKey&&!e.shiftKey&&a.target!=='_blank'){
       e.preventDefault();
       setTimeout(function(){location.href=a.href},300);
